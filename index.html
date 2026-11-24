@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unit 1 MCQ Quiz – Computer Systems</title>
+<style>
+:root{--bg:#eef2ff;--card:#fff;--tx:#1e2340;--mu:#6b7194;--pr:#5b5bf0;--pr2:#8b5cf6;--ok:#16a34a;--okb:#dcfce7;--no:#dc2626;--nob:#fee2e2;--bd:#e2e6f5;--sc:#fff7e0;--scb:#f4b400;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12142a;--card:#1c1f3d;--tx:#eceefc;--mu:#9aa0c8;--bd:#2c3060;--okb:#12391f;--nob:#411a1a;--sc:#35290a}}
+:root[data-theme="dark"]{--bg:#12142a;--card:#1c1f3d;--tx:#eceefc;--mu:#9aa0c8;--bd:#2c3060;--okb:#12391f;--nob:#411a1a;--sc:#35290a}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;
+background-image:radial-gradient(circle at 10% 0,rgba(91,91,240,.18),transparent 40%),radial-gradient(circle at 100% 100%,rgba(139,92,246,.18),transparent 40%)}
+.wrap{max-width:760px;margin:0 auto;padding:18px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:24px;box-shadow:0 10px 40px rgba(60,60,140,.12)}
+.hide{display:none!important}
+h1{margin:6px 0 4px;font-size:1.7rem;line-height:1.2}.mu{color:var(--mu)}
+.logo{width:72px;height:72px;border-radius:22px;background:linear-gradient(135deg,var(--pr),var(--pr2));display:grid;place-items:center;font-size:2.2rem;margin:0 auto 10px;box-shadow:0 8px 20px rgba(91,91,240,.4)}
+#start{text-align:center;margin-top:6vh}
+label{display:block;text-align:left;font-weight:600;font-size:.9rem;margin:16px 0 6px}
+input{width:100%;padding:14px 16px;border-radius:14px;border:2px solid var(--bd);background:var(--bg);color:var(--tx);font-size:1rem;outline:none}
+input:focus{border-color:var(--pr)}
+.btn{border:0;cursor:pointer;font-weight:700;font-size:1rem;padding:14px 22px;border-radius:14px;color:#fff;background:linear-gradient(135deg,var(--pr),var(--pr2));box-shadow:0 6px 18px rgba(91,91,240,.35);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn.ghost{background:var(--bg);color:var(--tx);box-shadow:none;border:2px solid var(--bd)}
+.btn.full{width:100%;margin-top:22px}.err{color:var(--no);font-size:.85rem;min-height:1.2em;margin-top:8px}
+.facts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:14px 0}.facts span{background:var(--bg);border:1px solid var(--bd);padding:6px 12px;border-radius:99px;font-size:.8rem}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;font-size:.85rem}
+.who{font-weight:700}.pill{background:var(--card);border:1px solid var(--bd);border-radius:99px;padding:6px 12px;font-weight:600}
+.bar{height:10px;background:var(--bd);border-radius:9px;overflow:hidden;margin-bottom:14px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pr),var(--pr2));transition:width .4s}
+.tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.06em;padding:4px 10px;border-radius:99px;background:var(--bg);color:var(--pr);margin-bottom:10px}
+.scn{background:var(--sc);border-left:5px solid var(--scb);padding:12px 14px;border-radius:12px;margin-bottom:14px;font-size:.95rem;line-height:1.5}
+.scn b{display:block;font-size:.72rem;letter-spacing:.08em;color:#b07d00;margin-bottom:4px}
+.q{font-size:1.2rem;font-weight:700;line-height:1.4;margin:0 0 16px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:13px 14px;margin-bottom:10px;border-radius:14px;border:2px solid var(--bd);background:var(--card);color:var(--tx);font-size:1rem;cursor:pointer;transition:.15s}
+.opt:hover:not(:disabled){border-color:var(--pr);transform:translateX(3px)}
+.opt b{flex:none;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--bg);color:var(--pr)}
+.opt:disabled{cursor:default;color:var(--tx)}
+.opt.ok{background:var(--okb);border-color:var(--ok)}.opt.ok b{background:var(--ok);color:#fff}
+.opt.no{background:var(--nob);border-color:var(--no)}.opt.no b{background:var(--no);color:#fff}
+.fb{margin:6px 0 0;padding:12px 14px;border-radius:12px;font-weight:600}.fb.ok{background:var(--okb);color:var(--ok)}.fb.no{background:var(--nob);color:var(--no)}
+.nav{display:flex;gap:10px;justify-content:space-between;margin-top:18px}
+.idx{margin-top:16px}.idx h3{margin:12px 0 8px;font-size:.85rem;color:var(--mu)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:7px}
+.grid button{height:40px;border-radius:11px;border:2px solid var(--bd);background:var(--card);color:var(--tx);font-weight:700;cursor:pointer}
+.grid .c{background:var(--ok);border-color:var(--ok);color:#fff}.grid .w{background:var(--no);border-color:var(--no);color:#fff}.grid .cur{outline:3px solid var(--pr);outline-offset:2px}
+.legend{display:flex;gap:14px;font-size:.75rem;color:var(--mu);margin-top:10px;flex-wrap:wrap}
+#res{text-align:center}.ring{width:170px;height:170px;border-radius:50%;margin:14px auto;display:grid;place-items:center;background:conic-gradient(var(--pr) calc(var(--p)*1%),var(--bd) 0)}
+.ring div{width:134px;height:134px;border-radius:50%;background:var(--card);display:grid;place-items:center;font-size:2.2rem;font-weight:800}
+.msg{font-size:1.15rem;font-weight:700;margin:8px 0 4px}.stats{display:flex;gap:10px;justify-content:center;margin:16px 0;flex-wrap:wrap}
+.stats div{background:var(--bg);border:1px solid var(--bd);border-radius:14px;padding:10px 16px;min-width:96px}.stats b{display:block;font-size:1.3rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section id="start" class="card">
+  <div class="logo">🖥️</div>
+  <h1>Computer Systems</h1>
+  <div class="mu">Computer Science IX · Unit 1 · MCQ Quiz</div>
+  <div class="facts"><span>📝 65 MCQs</span><span>🔀 Shuffled options</span><span>✅ Instant answers</span></div>
+  <label for="nm">Student name</label><input id="nm" placeholder="Enter your full name" autocomplete="name">
+  <label for="rl">Roll number</label><input id="rl" placeholder="Enter your roll number" inputmode="numeric">
+  <div class="err" id="err"></div>
+  <button class="btn full" id="go">Start Quiz →</button>
+</section>
+
+<section id="quiz" class="hide">
+  <div class="top"><span class="who" id="who"></span><span class="pill" id="sc">Score 0</span></div>
+  <div class="bar"><i id="pb"></i></div>
+  <div class="card">
+    <span class="tag" id="tag"></span>
+    <div class="scn hide" id="scn"><b>🧩 SCENARIO</b><span id="stx"></span></div>
+    <p class="q" id="qt"></p>
+    <div id="ops"></div>
+    <div class="fb hide" id="fb"></div>
+    <div class="nav"><button class="btn ghost" id="pv">← Back</button><button class="btn ghost" id="ix">☰ Index</button><button class="btn" id="nx">Next →</button></div>
+    <div class="idx hide" id="idx"></div>
+  </div>
+</section>
+
+<section id="res" class="card hide">
+  <div class="logo">🏆</div>
+  <h1 id="rn"></h1><div class="mu" id="rr"></div>
+  <div class="ring" id="ring"><div id="pc"></div></div>
+  <div class="msg" id="ms"></div><div class="mu" id="ms2"></div>
+  <div class="stats"><div><b id="sa"></b>Correct</div><div><b id="sb"></b>Wrong</div><div><b id="sct"></b>Total</div></div>
+  <div class="nav"><button class="btn ghost" id="rv">Review answers</button><button class="btn" id="rs">Try again ↻</button></div>
+</section>
+</div>
+
+<script>
+const N=[["What was the primary mathematical function of John Napier's Bones in early computing?",["Storing binary instructions on magnetic tape","Simplifying multiplication, division, and square roots","Translating natural human speech into text","Executing conditional branching loops"],1],["How did Charles Babbage's Analytical Engine fundamentally differ from his Difference Engine?",["It was programmable using punch cards, loops, and conditional branching","It was powered by integrated circuits","It used vacuum tubes instead of mechanical gears","It could only compute polynomial equations"],0],["Which technological component characterized first-generation computers (1940– 1956)?",["Transistors","Microprocessors","Vacuum tubes","Integrated Circuits"],2],["What was a major operational limitation of vacuum tubes in first-generation computers?",["They generated excessive heat, consumed massive power, and failed frequently","They could only run wireless networking protocols","They required quantum cooling systems","They were too small to repair manually"],0],["Which pair of machines belongs to the first generation of computers?",["Intel 4004 and Apple Macintosh","ENIAC and UNIVAC","IBM 7094 and UNIVAC 1108","IBM System/360 and PDP-8"],1],["What key impact did transistors have on second-generation computers (1956–1963)?",["They introduced graphical web browsers","They made computers smaller, faster, more reliable, and commercially practical","They eliminated the need for primary memory","They enabled natural language voice assistants"],1],["Why are Integrated Circuits (ICs) considered a major breakthrough in third- generation computers?",["They replaced electricity with optical light beams","They allowed machines to pass the Turing test","They combined multiple transistors and resistors onto a single silicon chip","They introduced punch-card programming"],2],["Which example represents a third-generation computer system (1964–1971)?",["Intel 4004","IBM 7094","ENIAC","IBM System/360"],3],["How did microprocessors revolutionize fourth-generation computers starting in 1971?",["By eliminating operating systems","By replacing solid-state storage with punch cards","By integrating thousands of ICs onto a single chip, enabling affordable personal computers","By restricting computing exclusively to military mainframes"],2],["What is the primary goal of fifth-generation computers?",["Developing machines with Artificial Intelligence capable of reasoning and natural language understanding","Reducing screen resolution to save power","Replacing networks with standalone calculators","Reverting to mechanical gear calculations"],0],["Which technology enables fifth-generation computers to understand and process human speech and text?",["Asynchronous Framing","Packet Switching","MAC Addressing","Natural Language Processing (NLP)"],3],["Which of the following is an ethical or societal challenge associated with fifth- generation AI systems?",["Inability to process large datasets","Slower arithmetic calculation speeds","Excessive physical size of vacuum tubes","Job displacement due to automation and data privacy concerns"],3],["Which three types of memory are located on the motherboard in Von Neumann architecture?",["Cache Memory, RAM, and ROM","Hard Disk, USB Flash, and DVD","SSD, Blu-ray, and Floppy Disk","Registers, Magnetic Tape, and Cloud Storage"],0],["What is the specific function of ROM (Read-Only Memory) on a motherboard?",["Acting as high-speed CPU registers","Caching web browser history","Storing permanent firmware instructions needed to boot up the system","Temporarily holding active gaming graphics"],2],["Which statement accurately differentiates volatile memory from non-volatile memory?",["Volatile memory (e.g., RAM) loses data when power is turned off; non-volatile (e.g., ROM) retains it","Both volatile and non-volatile memory erase data upon shutdown","Volatile memory retains data without power; non-volatile loses data","Non-volatile memory is faster than CPU registers"],0],["What is the correct order of the memory hierarchy from fastest to slowest access speed?",["RAM → Cache → Registers → HDD → Secondary Storage","Cache → Registers → HDD → RAM → Secondary Storage","Secondary Storage → HDD → RAM → Cache → Registers","Registers → Cache Memory → RAM → Hard Disk Drives → Secondary Storage"],3],["How does a larger processor word size (e.g., 64-bit vs. 32-bit) affect computer performance?",["It reduces the amount of RAM the OS can recognize","It slows down instruction pipelining","It allows more data to be processed in a single CPU cycle, boosting heavy applications","It converts non-volatile storage into volatile memory"],2],["How does CPU pipelining improve processing efficiency?",["By disabling cache memory during multitasking","By executing only one instruction completely before fetching the next","By doubling the physical size of the hard drive","By breaking instruction execution into stages (fetch, decode, execute) and overlapping them simultaneously"],3],["Which hardware upgrade best improves boot times and multitasking on an older PC without replacing the CPU?",["Switching from full-duplex to simplex networking","Replacing the monitor with a CRT display","Installing an impact dot-matrix printer","Adding more RAM and upgrading from an HDD to an SSD"],3],["Which advantage is unique to impact printers compared to non-impact printers?",["Ability to print carbon copies at low cost","Laser-sharp photographic resolution","Zero mechanical contact with paper","Silent operation at high speeds"],0],["Why are ecosystems and the human body classified as natural systems?",["They rely on artificial protocols for communication","They were invented during the industrial revolution","They are engineered using software algorithms","They exist and function in nature without human intervention"],3],["How do artificial systems often draw inspiration from natural systems?",["By eliminating human oversight from transportation","By mimicking natural structures, such as airplane wings modeled after bird wings","By replacing all roads with natural rivers","By ignoring biological principles completely"],1],["In data communication, what is a \"protocol\"?",["The physical storage capacity of a server","A set of rules governing how data is transmitted, received, and interpreted","The copper wire connecting two computers","A type of non-impact laser printer"],1],["Which pair correctly matches a communication mode with its real-world example?",["Full-duplex — Television broadcasting","Simplex — Two-way video conferencing","Half-duplex — Walkie-talkie communication","Simplex — Telephone conversation"],2],["How does full-duplex communication differ from half-duplex communication?",["Full-duplex allows only one-way data flow","Full-duplex allows simultaneous two-way transmission, whereas half-duplex allows one direction at a time","Full-duplex requires start and stop bits for every character","Half-duplex is faster than full-duplex"],1],["What is the purpose of start and stop bits in asynchronous data transmission?",["To mark the beginning and end of a data packet for sender-receiver synchronization","To encrypt confidential passwords","To compress video streams","To assign IP addresses to routers"],0],["In which scenario is synchronous transmission typically preferred over asynchronous transmission?",["Typing single characters on a keyboard","Real-time video calls and live streaming requiring continuous data flow","Sending occasional text emails","Offline file archiving"],1],["Why is error detection critical during network communication?",["It increases cable length beyond 100 meters","It broadcasts packets to all unauthorized nodes","It converts analog signals into mechanical motion","It ensures data integrity by identifying and correcting corrupted bits before delivery"],3],["How does a network switch improve efficiency compared to a hub?",["A switch directs data only to the intended destination device using MAC addresses","A switch translates between different network protocols","A switch connects different wide-area networks via IP addresses","A switch broadcasts every packet to all connected ports"],0],["Which addressing mechanism does a router use to forward data packets across multiple networks?",["Sector numbers","IP addresses","Start and stop bits","MAC addresses"],1],["What is the specific function of a gateway in data communication?",["Storing local web browser cookies","Broadcasting data to all nodes in a bus topology","Acting as a bridge that translates data between two networks using different protocols","Amplifying weak electrical signals on a single cable"],2],["What is a primary limitation of a peer-to-peer network compared to a client/server network?",["Devices cannot share files directly","It only works over satellite links","It requires an expensive central mainframe server","It is less secure and harder to manage as the number of devices grows"],3],["What happens in a bus topology if the central backbone cable fails?",["Network speed doubles","Data automatically reroutes through a backup ring","Only the last connected computer loses access","The entire network goes down"],3],["Why is star topology considered reliable yet relatively expensive?",["It uses no cables at all","A single node failure does not affect others, but it requires extensive cabling and a central hub/switch","Every computer connects directly to every other computer","Data travels in a single circular loop without a hub"],1],["How does data travel in a ring topology, and what is its main vulnerability?",["Bi-directionally; high cabling cost","Through a central server; central server overload","In one circular direction; failure of a single node can disrupt the entire network","Randomly across wireless nodes; high signal interference"],2],["In which environment is a mesh topology most appropriate despite its high cost and complexity?",["A small school classroom with low traffic","A temporary home network with two laptops","Mission-critical systems like military or banking networks requiring high fault tolerance","A single-printer office setup"],2],["How many conceptual layers make up the OSI (Open Systems Interconnection) model?",["Eight","Four","Five","Seven"],3],["Which OSI layer is responsible for transmitting raw binary bits over physical cables or wireless signals?",["Physical Layer","Transport Layer","Network Layer","Data Link Layer"],0],["Into which two sublayers is the Data Link Layer of the OSI model divided?",["TCP and UDP","SSL and TLS","HTTP and FTP","MAC (Media Access Control) and LLC (Logical Link Control)"],3],["Which OSI layer determines the best routing path and handles logical IP addressing?",["Presentation Layer","Network Layer","Session Layer","Physical Layer"],1],["How does the Transport Layer guarantee reliable data delivery between hosts?",["Through segmentation, sequencing, error recovery, and retransmission (e.g., TCP)","By translating domain names into IP addresses","By converting text into JPEG images","By physically connecting Ethernet cables"],0],["What is the primary role of the Session Layer in the OSI model?",["Routing packets across international routers","Establishing, managing, and terminating communication sessions between applications","Encrypting passwords using SSL/TLS","Framing bits for Ethernet switches"],1],["Which OSI layer handles data translation, encryption (SSL/TLS), and compression?",["Presentation Layer","Network Layer","Data Link Layer","Application Layer"],0],["Which set of protocols operates at the Application Layer of the OSI model?",["MAC, LLC, and ARP","NetBIOS and RPC","TCP, UDP, and IP","HTTP, FTP, and SMTP"],3],["What was ARPANET, and what key technology did it introduce in the 1960s?",["A U.S. Department of Defense network that pioneered packet-switching technology","A wireless 5G mobile standard","A commercial social network introducing video streaming","A graphical web browser invented in the 1990s"],0],["Which milestone occurred during the 1980s to simplify website addressing on the growing Internet?",["Creation of the first mechanical calculator","Introduction of the Domain Name System (DNS) and NSFNET","Invention of vacuum tubes","Launch of 5G cellular networks"],1],["Who developed the World Wide Web (WWW) in the 1990s using HTTP, HTML, and URLs?",["Charles Babbage","Tim Berners-Lee","Alan Turing","John Napier"],1],["How did broadband technology transform Internet usage in the 2000s?",["It restricted web access to government mainframes","It eliminated the need for TCP/IP protocols","It forced users back to slow telephone dial-up lines","It replaced dial-up with high-speed always-on connectivity"],3],["What does the term \"Digital Divide\" refer to as a disadvantage of the Internet?",["Splitting a hard drive into two partitions","Unequal access to the Internet across different regions, creating gaps in opportunity","Separating volatile RAM from non-volatile ROM","Dividing data into packets at the Transport Layer"],1],["Which protocol is specifically used for transferring files between a client and a server?",["UDP","HTTP","FTP","SMTP"],2],["Which protocol governs standard web browsing communication between browsers and web servers?",["HTTP","FTP","SMTP","NetBIOS"],0],["What does IoT stand for in modern-day Internet advancements?",["Internal Optical Transmission","Integrated Online Terminal","Input Output Topology","Internet of Things"],3],["Which of the following is an example of an artificial transportation system?",["Ocean currents","River ecosystems","Road networks, traffic signals, and GPS navigation","Bird migration routes"],2],["Why is fiber-optic cable superior to traditional copper cable as a transmission medium?",["It is heavier and slower","It works without any network protocols","It offers much faster data transfer speeds and significantly less signal loss","It uses magnetic punch cards"],2],["What happens at the receiver's end after data packets travel across a network?",["They are decoded and reassembled into the original message","They are converted into vacuum tube heat","They are broadcast back to all routers","They are permanently deleted before reading"],0],["Which characteristic allows fifth-generation computers to perform multiple complex tasks simultaneously?",["Single-core clock throttling","Simplex transmission","Parallel processing","Sequential vacuum switching"],2],["Which type of storage is non-volatile and retains system files even after power loss?",["Processor Registers","Hard Disk Drives (HDD) and ROM","L1 CPU Cache","Dynamic RAM"],1],["In which scenario is bus topology still preferred despite its limited scalability?",["Global banking networks","High-security military command centers","Intercontinental telecommunications","Small networks with low data traffic due to low cost and easy setup"],3],["How does the OSI model simplify network troubleshooting for engineers?",["By isolating communication functions into seven distinct layers so faults can be pinpointed","By combining all hardware and software into one single layer","By automatically replacing broken Ethernet cables","By eliminating IP addresses"],0],["Which factor should be prioritized when selecting RAM for a gaming or simulation PC?",["Slowest clock speed for thermal stability","Large capacity and high speed (e.g., DDR4/DDR5)","Smallest possible capacity to save space","Read-only non-volatile access"],1],["Which device connects computers within the same local network segment and forwards frames selectively?",["Gateway","Modem","Switch","Repeater"],2],["What negative impact can excessive social media and gaming use have on individuals?",["Stronger data encryption","Improved memory hierarchy","Digital addiction, reduced productivity, and mental health issues","Faster broadband download speeds"],2],["How has e-commerce benefited modern businesses via the Internet?",["By enabling businesses to reach global customers and conduct online transactions","By eliminating digital marketing","By replacing cloud storage with paper ledgers","By restricting sales to local neighborhood stores"],0],["What is the role of Cache Memory in the motherboard's memory architecture?",["Very fast temporary storage for frequently accessed data to speed up CPU processing","Connecting external USB printers","Permanent archival of operating system installers","Managing wireless Wi-Fi encryption"],0],["Which statement best summarizes the overall impact of computer evolution from the 1st to 5th generation?",["Computers became larger, slower, and limited to simple arithmetic","Computers became affordable only for defense agencies","Computers evolved from massive, power-hungry machines into compact, intelligent, globally connected systems","Computers abandoned binary logic in favor of mechanical gears"],2]];
+const S=[];
+const Q=N.map(q=>({q:q[0],o:q[1],a:q[2]}));
+S.forEach((s,i)=>s[1].forEach(q=>Q.push({q:q[0],o:q[1],a:q[2],sc:s[0],sn:i+1})));
+const $=id=>document.getElementById(id),L="ABCD";
+let cur=0,ans=[],name="",roll="",review=false;
+const show=id=>["start","quiz","res"].forEach(s=>$(s).classList.toggle("hide",s!==id));
+
+$("go").onclick=()=>{
+  name=$("nm").value.trim();roll=$("rl").value.trim();
+  if(!name||!roll){$("err").textContent="Please enter both your name and roll number.";return}
+  $("err").textContent="";ans=Array(Q.length).fill(null);cur=0;review=false;
+  $("who").textContent="👤 "+name+" · Roll "+roll;show("quiz");draw();
+};
+function score(){return ans.filter((a,i)=>a===Q[i].a).length}
+function draw(){
+  const q=Q[cur],a=ans[cur];
+  $("tag").textContent=(q.sc?"SCENARIO "+q.sn+" · ":"")+"QUESTION "+(cur+1)+" OF "+Q.length;
+  $("scn").classList.toggle("hide",!q.sc);if(q.sc)$("stx").textContent=q.sc;
+  $("qt").textContent=q.q;
+  $("ops").innerHTML="";
+  q.o.forEach((t,i)=>{
+    const b=document.createElement("button");b.className="opt";b.innerHTML="<b>"+L[i]+"</b><span></span>";b.lastChild.textContent=t;
+    if(a!==null){b.disabled=true;if(i===q.a)b.classList.add("ok");else if(i===a)b.classList.add("no")}
+    b.onclick=()=>{ans[cur]=i;draw()};$("ops").appendChild(b);
+  });
+  const fb=$("fb");fb.classList.toggle("hide",a===null);
+  if(a!==null){const ok=a===q.a;fb.className="fb "+(ok?"ok":"no");
+    fb.textContent=ok?"✅ Correct! Well done.":"❌ Wrong. Correct answer: "+L[q.a]+") "+q.o[q.a]}
+  $("sc").textContent="Score "+score();
+  $("pb").style.width=(ans.filter(x=>x!==null).length/Q.length*100)+"%";
+  $("pv").style.visibility=cur?"visible":"hidden";
+  $("nx").textContent=cur===Q.length-1?"Finish ✓":"Next →";
+  $("nx").disabled=a===null&&!review;$("nx").style.opacity=$("nx").disabled?.5:1;
+  drawIdx();
+}
+function drawIdx(){
+  let h='<h3>QUESTIONS 1–'+N.length+'</h3><div class="grid">';
+  Q.forEach((q,i)=>{
+    if(i===N.length)h+='</div><h3>🧩 SCENARIO BASED · '+(N.length+1)+'–'+Q.length+'</h3><div class="grid">';
+    const c=ans[i]===null?"":ans[i]===q.a?"c":"w";
+    h+='<button data-i="'+i+'" class="'+c+(i===cur?" cur":"")+'">'+(i+1)+'</button>';
+  });
+  h+='</div><div class="legend"><span>🟩 Correct</span><span>🟥 Wrong</span><span>⬜ Not answered</span></div>';
+  $("idx").innerHTML=h;
+  $("idx").querySelectorAll("button").forEach(b=>b.onclick=()=>{cur=+b.dataset.i;draw()});
+}
+$("ix").onclick=()=>$("idx").classList.toggle("hide");
+$("pv").onclick=()=>{cur--;draw()};
+$("nx").onclick=()=>{if(cur<Q.length-1){cur++;draw()}else finish()};
+function finish(){
+  const s=score(),t=Q.length,p=Math.round(s/t*100);
+  $("rn").textContent=name;$("rr").textContent="Roll No: "+roll;$("pc").textContent=p+"%";
+  $("ring").style.setProperty("--p",p);
+  $("sa").textContent=s;$("sb").textContent=ans.filter((a,i)=>a!==null&&a!==Q[i].a).length;$("sct").textContent=t;
+  const m=p>=90?["🌟 Outstanding!","You have mastered this unit."]:p>=75?["🎉 Great job!","Just a little more practice for full marks."]:p>=50?["👍 Good effort!","Revise the topics you missed and try again."]:["💪 Keep practicing!","Read the chapter once more and retry. You can do it!"];
+  $("ms").textContent=m[0];$("ms2").textContent=m[1];show("res");window.scrollTo(0,0);
+}
+$("rv").onclick=()=>{review=true;cur=0;show("quiz");draw()};
+$("rs").onclick=()=>{$("nm").value="";$("rl").value="";show("start")};
+</script>
+</body>
+</html>
